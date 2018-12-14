@@ -2340,6 +2340,11 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+date-fns@^1.29.0:
+  version "1.30.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
+  integrity sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==
+
 date-now@^0.1.4:
   version "0.1.4"
   resolved "http://registry.npm.taobao.org/date-now/download/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
@@ -7296,6 +7301,19 @@ vue@^2.5.17:
   version "2.5.21"
   resolved "http://registry.npm.taobao.org/vue/download/vue-2.5.21.tgz#3d33dcd03bb813912ce894a8303ab553699c4a85"
   integrity sha1-PTPc0Du4E5Es6JSoMDq1U2mcSoU=
+
+vuetify-daterange-picker@^2.2.0:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/vuetify-daterange-picker/-/vuetify-daterange-picker-2.6.1.tgz#4c055c88e1a8935fb2924888bb5bc57fe86d4f5f"
+  integrity sha512-kDAffo8p4McQtEJfqJ/mls17JVjm09oxtRnMqxcyVm373hOzvGXqODfQCXuwQRYdIilPo9rJNJ4pWOjrKW3ocQ==
+  dependencies:
+    date-fns "^1.29.0"
+    vuetify "^1.0.4"
+
+vuetify@>=1.0.4, vuetify@^1.0.4:
+  version "1.3.14"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.3.14.tgz#d0dbcbd2c10b5bf5954ba05a823f0a0cacb58661"
+  integrity sha512-/xzfxFLv4FFdXi2c+tfQhXiw7MwtcYk3E7gXBMYbZb5kM7emFf3Up4JKvu93o9Qe/wQysMLQk2q1LFCLfJ/Slg==
 
 watchpack@^1.5.0:
   version "1.6.0"
