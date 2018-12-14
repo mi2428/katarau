@@ -4,7 +4,7 @@ import Landing from "./views/Landing/index.vue"
 import Home from "./views/Home/index.vue"
 import Student from "./views/Student/index.vue"
 import Elderly from "./views/Elderly/index.vue"
-import Layout from "@/views/Layout";
+import Layout from "@/views/Layout"
 
 
 Vue.use(Router)
@@ -14,15 +14,14 @@ const router = new Router({
   base: process.env.BASE_URL,
     routes: [
       {
-        path: '/landing',
+        path: '/',
         name: 'landing',
         component: Landing
       },
       {
-        path: '/',
+        path: '',
         name: 'layout',
         component: Layout,
-        redirect: { name: "landing"},
         children: [
           {
             path: '/home',
