@@ -25,7 +25,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar
-      color="orange"
+      color="green"
       dense
       fixed
       clipped-left
@@ -49,29 +49,6 @@
     </v-toolbar>
   </div>
 </template>
-
-<style scoped lang="scss">
-</style>
-
-
-<script>
-export default {
-  name: "Landing",
-  data: () => ({
-    drawer: false
-  }),
-  props: {
-    source: String
-  },
-  methods: {
-    signout: function(){
-      firebase.auth().signOut().then(() => {
-        this.$router.push('/')
-        });
-    }
-  }
-};
-</script>
 
 <style scoped lang="scss">
 </style>

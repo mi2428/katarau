@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Landing from "./views/Landing/index.vue"
+import Layout from "@/views/Layout"
+import Home from "@/views/Home";
+import Student from "@/views/Student";
 
-
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
