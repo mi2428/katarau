@@ -1,20 +1,68 @@
 <template>
   <v-content>
-    <v-container>
-      <v-layout row>
-        <v-flex xs12>
-          <h1>Student</h1>
-        </v-flex>
-      </v-layout>
-    </v-container>
+    <div
+      id="e3"
+      style="max-width: 1800px; margin: auto;"
+      class="grey lighten-3"
+    >
+      <v-card>
+        <v-container
+          fluid
+          grid-list-lg
+        >
+          <v-layout row wrap>
+            <v-flex xs12>
+              <v-card color="orange" class="white--text">
+                <v-card-title primary-title>
+                  <div>
+                    <div class="headline">かたらう学生パートナー</div>
+                    <span>ああああああああああああああああああああああああああああ
+                      あああああああああああああああああああああああああああああ</span>
+                  </div>
+                </v-card-title>
+                <v-card-actions>
+                  <v-btn grey left>今すぐ登録する</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-flex>
+
+            <v-flex xs12>
+              <v-card color="lime" class="white--text">
+                <v-card-title primary-title>
+                  <div>
+                    <div class="headline">かたらう学生パートナーのメリット</div>
+                    <span>ああああああああああああああああああああああああああああ
+                      あああああああああああああああああああああああああああああ</span>
+                  </div>
+                </v-card-title>
+              </v-card>
+            </v-flex>
+            <v-flex xs12>
+              <v-card color="lime" class="white--text">
+                <v-card-title primary-title>
+                  <div>
+                    <div class="headline">仕組み</div>
+                    <span>ああああああああああああああああああああああああああああ
+                      あああああああああああああああああああああああああああああ</span>
+                  </div>
+                </v-card-title>
+              </v-card>
+            </v-flex>
+
+
+          </v-layout>
+        </v-container>
+      </v-card>
+    </div>
   </v-content>
 </template>
 
 <script>
 export default {
-  name: "Home",
+  name: "Student",
 };
 </script>
 
 <style scoped lang="scss">
+
 </style>

@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Landing from "./views/Landing/index.vue"
-import Home from "./views/Home/index.vue"
 import Student from "./views/Student/index.vue"
 import Elderly from "./views/Elderly/index.vue"
 import Layout from "@/views/Layout"
@@ -23,11 +22,6 @@ const router = new Router({
         name: 'layout',
         component: Layout,
         children: [
-          {
-            path: '/home',
-            name: 'home',
-            component: Home
-          },
           {
             path: '/about',
             name: 'about',
