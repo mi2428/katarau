@@ -2,31 +2,42 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Landing from "./views/Landing/index.vue"
 import Home from "./views/Home/index.vue"
+import Layout from "@/views/Layout";
 
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'landing',
-      component: Landing
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About/index.vue')
-    }
-  ]
+    routes: [
+      {
+        path: '/',
+        name: 'layout',
+        component: Layout,
+        redirect: { name: "landing"},
+        children: [
+          {
+            path: '/landing',
+            name: 'landing',
+            component: Landing
+          },
+          {
+            path: '/home',
+            name: 'home',
+            component: Home
+          },
+          {
+            path: '/about',
+            name: 'about',
+            // route level code-splitting
+            // this generates a separate chunk (about.[hash].js) for this route
+            // which is lazy-loaded when the route is visited.
+            component: () => import(/* webpackChunkName: "about" */ './views/About/index.vue')
+          }
+        ]
+      }
+    ]
 })
+
+export default router;
