@@ -1,55 +1,46 @@
 <template>
   <v-content id="landing">
-    <v-container>
+    <v-container fluid>
       <v-layout justify-center>
         <v-flex xs12, pa-3 ma-3 id="landing_title">
           かたらう
         </v-flex>
       </v-layout>
-      <v-layout justify-center>
-        <v-flex xs12 lg6 id="landing_vision">
-          <div>独居の高齢者に充実した生活を提供する。</div>
-          <div>頑張ろう、日本！</div>
-        </v-flex>
-      </v-layout>
     </v-container>
     <v-container>
-      <v-layout justify-center row>
-        <v-flex xs6 lg4>
+      <v-layout justify-space-between align-center row>
+        <v-flex xs4 lg3>
           <v-card
+            ripple
+            color="blue-grey darken-2"
+            dark
             class="selection"
-            @click="to_students()"
+            to="students"
           >
-            <v-img
-              v-bind:src="require('@/assets/landing_students.jpg')"
-            >
-              <v-container fill-height fluid>
-                <v-layout fill-height>
-                  <v-flex xs12 align-end flexbox>
-                    <span>学生</span>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-img>
+            <v-img v-bind:src="require('@/assets/landing_students.jpg')"/>
+            <v-card-title primary-title>
+              <v-layout justify-center>学生</v-layout>
+            </v-card-title>
           </v-card>
         </v-flex>
-        <v-flex xs0 lg2/>
-        <v-flex xs6 lg4>
+        <v-flex xs4 lg3>
+          <v-card id="landing_vision">
+            <div>独居の高齢者に充実した生活を提供する。</div>
+            <div>頑張ろう、日本！</div>
+          </v-card>
+        </v-flex>
+        <v-flex xs4 lg3>
           <v-card
+            ripple
+            color="blue-grey darken-2"
+            dark
+            to="elderly"
             class="selection"
-            @click="to_elderly()"
           >
-            <v-img
-              v-bind:src="require('@/assets/landing_elderly.jpg')"
-            >
-              <v-container fill-height fluid>
-                <v-layout fill-height>
-                  <v-flex xs12 align-end flexbox>
-                    <span>高齢者</span>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-img>
+            <v-img v-bind:src="require('@/assets/landing_elderly.jpg')"/>
+            <v-card-title primary-title>
+              <v-layout justify-center>高齢者</v-layout>
+            </v-card-title>
           </v-card>
         </v-flex>
       </v-layout>
@@ -59,21 +50,13 @@
 
 <script>
 export default {
-  name: "Landing",
-  methods: {
-    to_elderly() {
-      this.$router.push({path : 'elderly'})
-    },
-    to_students() {
-      this.$router.push({path : 'students'})
-    },
-  }
+  name: "Landing"
 };
 </script>
 
 <style scoped lang="scss">
   #landing {
-    height: 100vh;
+    min-height: 100vh;
     background: black;
   }
   #landing_title {
@@ -82,11 +65,11 @@ export default {
   }
   #landing_vision {
     color: orange;
+    background: black;
     font-size: 20pt;
   }
   .selection {
     cursor: pointer;
-    color: orange;
     font-weight: bold;
     font-size: 40pt;
     border-radius: 50px;
