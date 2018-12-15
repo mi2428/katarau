@@ -93,7 +93,7 @@
         </v-layout>
         <v-layout justify-center>
           <v-card-actions left>
-            <v-btn red @click="registration()">登録する</v-btn>
+            <v-btn @click="registration()">登録する</v-btn>
           </v-card-actions>
         </v-layout>
       </v-card>
@@ -120,7 +120,7 @@
           required: value => !!value || 'Required.',
           min: v => v.length >= 8 || 'Min 8 characters',        
           confirmRequired: v => !!v || 'Password Confirm is required',
-          confirmRules: v => v === this.password && 'Password confirm is equal to password',
+          confirmRules: v => v === this.password && 'equal to password',
         }       
       };
     },
@@ -129,17 +129,19 @@
 
     methods: {
       registration() {
-        this.$router.push({
-          name: 'confirm',
-          params:{
-            lastname: this.lastname,
-            firstname: this.firstname,
-            phone: this.phone,
-            email: this.email,
-            major: this.major,
-            password: this.password
-          }
-        });
+        if(this.password===this.passwordConfirm){
+          this.$router.push({
+            name: 'confirm',
+            params:{
+              lastname: this.lastname,
+              firstname: this.firstname,
+              phone: this.phone,
+              email: this.email,
+              major: this.major,
+              password: this.password
+            }
+          });
+        }
       }
     }
   };
