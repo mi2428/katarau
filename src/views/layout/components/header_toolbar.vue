@@ -8,6 +8,14 @@
     >
       <v-list dense>
         <v-subheader class="mt-3 grey--text text--darken-1">MENU</v-subheader>
+        <v-toolbar flat class = "transparent">
+        <v-list-tile-avatar>
+          <v-icon rounded large>face</v-icon>
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+          <v-list-tile-title> Your Name</v-list-tile-title>
+          </v-list-tile-content>
+        </v-toolbar>
         <v-list-tile-content>
           <v-list-tile to="/">
             <v-list-tile-action>
@@ -43,14 +51,17 @@
         <span class="title">かたらう</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-layout row align-center style="max-width: 650px">
-        <v-text-field
-          placeholder="Search..."
-          single-line
-          append-icon="search"
-          color="white"
-          hide-details
-        ></v-text-field>
+
+          <v-btn flat >学生</v-btn>
+          <v-btn flat>高齢者</v-btn>
+          <v-btn icon flat>
+            <v-icon right justify-end>face</v-icon>
+            </v-btn>
+          <v-text flat>Your Nameさん</v-text>
+
+      <v-spacer></v-spacer>
+
+      <v-layout align-end jistify-end row style="max-width: 650px">
       </v-layout>
     </v-toolbar>
   </div>
