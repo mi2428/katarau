@@ -14,7 +14,7 @@
           </v-flex>
           <v-flex xs12 sm3>
             <v-text-field
-              v-model="lastname"
+              v-model="firstname"
               placeholder="名"
             ></v-text-field>
           </v-flex>
