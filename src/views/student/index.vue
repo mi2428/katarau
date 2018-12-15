@@ -23,6 +23,7 @@
                 <v-layout justify-center>
                   <v-card-actions>
                     <v-btn grey left  @click="to_students_join()" >今すぐ登録する</v-btn>
+                    <v-btn grey left  @click="to_students_signin()" >サインイン</v-btn>
                   </v-card-actions>
                 </v-layout>
               </v-card>
@@ -65,6 +66,9 @@ export default {
   methods: {
     to_students_join() {
       this.$router.push({path : 'students/join'})
+    },
+    to_students_signin() {
+      this.$router.push({path : 'students/signin'})
     },
   }
 };
