@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Landing from "./views/landing/index.vue"
-import Student from "./views/student/index.vue"
-import Join from "./views/join/index.vue"
-import Elderly from "./views/elderly/index.vue"
 import Layout from "@/views/layout"
+import Student from "./views/student/index.vue"
+import Elderly from "./views/elderly/index.vue"
+import Join from "./views/join/index.vue"
+import Register from "./views/join/components/registration_form.vue"
+import Confirm from "./views/join/components/confirmation.vue"
 
 
 Vue.use(Router)
@@ -44,9 +46,22 @@ const router = new Router({
           {
             path: "/students/join",
             name: "join",
-            component: Join
+            component: Join,
+            redirect: {name: 'form'},
+            children: [
+              {
+                path: 'form',
+                name: 'form',
+                component: Register
+              },
+              {
+                path: 'confirm',
+                name: 'confirm',
+                component: Confirm,
+                props: true
+              }
+            ]
           }
-
         ]
       }
     ]

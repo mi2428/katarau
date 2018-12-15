@@ -31,7 +31,7 @@
         <v-flex xs6 lg4 pt-3 mt-3>
           <v-card
             class="selection"
-            @click="to_students()"
+            @click="to_elderly()"
           >
             <v-img
               v-bind:src="require('@/assets/landing_elderly.jpg')"
@@ -69,7 +69,6 @@ export default {
   #landing {
     height: 100vh;
     background: black;
-    background-size: cover;
   }
   #landing_title {
     color: orange;

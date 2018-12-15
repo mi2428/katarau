@@ -4,7 +4,7 @@
       <v-layout row>
         <v-flex xs12>
           <h1>Registration Form</h1>
-          <Register/>
+          <router-view></router-view>
         </v-flex>
       </v-layout>
     </v-container>
@@ -12,11 +12,9 @@
 </template>
 
 <script>
-import Register from "./components/registration_form.vue";
 export default {
   name: "Join",
   components: {
-    Register
   }
 };
 </script>

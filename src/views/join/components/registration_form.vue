@@ -55,7 +55,7 @@
             ></v-text-field>
           </v-flex>
         </v-layout>
-        
+
         <v-layout row>
           <v-flex xs3>
             <v-subheader>パスワード</v-subheader>
@@ -96,19 +96,7 @@
 
     methods: {
       registration() {
-        firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
-          .then(user => {
-            firebase.firestore().collection("user").add({
-              firstname: this.firstname,
-              lastname: this.lastname,
-              phone: this.phone,
-              special: this.special
-            });
-
-          })
-          .catch(error => {
-            alert(error.message);
-        });
+        this.$router.push({name: 'confirm', params:{firstname: this.firstname}})
       }
     }
   };
