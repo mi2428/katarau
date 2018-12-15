@@ -61,9 +61,33 @@
             <v-subheader>パスワード</v-subheader>
           </v-flex>
         　<v-flex xs12 sm6>
+           
+          <v-text-field
+            v-model="password"
+            :append-icon="show1 ? 'visibility_off' : 'visibility'"
+            :rules="[rules.required, rules.min]"
+            :type="show1 ? 'text' : 'password'"
+            name="input-10-1"
+            hint="At least 6 characters"
+            counter
+            @click:append="show1 = !show1"
+          ></v-text-field>
+          </v-flex>
+        </v-layout>
+
+        <v-layout row>
+          <v-flex xs3>
+            <v-subheader>パスワード再入力</v-subheader>
+          </v-flex>
+        　<v-flex xs12 sm6>
             <v-text-field
-              v-model="password"
-              placeholder="パスワード"
+            v-model="passwordConfirm"
+            :append-icon="show2 ? 'visibility_off' : 'visibility'"
+            :rules="[rules.confirmRequired, rules.confirmRules]"
+            :type="show2 ? 'text' : 'password'"
+            name="input-10-2"
+            counter
+            @click:append="show2 = !show2"
             ></v-text-field>
           </v-flex>
         </v-layout>
@@ -89,6 +113,15 @@
         email: "",
         major: "",
         password: "",
+        passwordConfirm: "",
+        show1: false,
+        show2: false,
+        rules: {
+          required: value => !!value || 'Required.',
+          min: v => v.length >= 8 || 'Min 8 characters',        
+          confirmRequired: v => !!v || 'Password Confirm is required',
+          confirmRules: v => v === this.password && 'Password confirm is equal to password',
+        }       
       };
     },
     computed: {
