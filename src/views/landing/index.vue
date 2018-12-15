@@ -1,9 +1,15 @@
 <template>
   <v-content id="landing">
     <v-container>
-      <v-layout row>
+      <v-layout justify-center>
         <v-flex xs12, pa-3 ma-3 id="landing_title">
           かたらう
+        </v-flex>
+      </v-layout>
+      <v-layout justify-center>
+        <v-flex xs12 lg6 id="landing_vision">
+          <div>独居の高齢者に充実した生活を提供する。</div>
+          <div>頑張ろう、日本！</div>
         </v-flex>
       </v-layout>
     </v-container>
@@ -73,6 +79,10 @@ export default {
   #landing_title {
     color: orange;
     font-size: 50pt;
+  }
+  #landing_vision {
+    color: orange;
+    font-size: 20pt;
   }
   .selection {
     cursor: pointer;

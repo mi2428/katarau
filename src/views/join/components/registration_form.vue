@@ -1,108 +1,73 @@
 <template>
-  <div>
-    <section>
-      <v-card>
-        <v-layout row>
-          <v-flex xs3>
-            <v-subheader>名前</v-subheader>
-          </v-flex>
-        　<v-flex xs12 sm3>
-            <v-text-field
-              v-model="lastname"
-              placeholder="性"
-            ></v-text-field>
-          </v-flex>
-          <v-flex xs12 sm3>
-            <v-text-field
-              v-model="firstname"
-              placeholder="名"
-            ></v-text-field>
-          </v-flex>
-        </v-layout>
+  <v-layout row justify-center>
+    <v-flex xs12 lg6>
+      <v-form ref="form" v-model="valid" lazy-validation>
+        <v-text-field
+          v-model="lastname"
+          label="性"
+          :rules="[rules.required]"
+          required
+        ></v-text-field>
+        <v-text-field
+          v-model="firstname"
+          label="名"
+          :rules="[rules.required]"
+          required
+        ></v-text-field>
 
-        <v-layout row>
-          <v-flex xs3>
-            <v-subheader>電話番号</v-subheader>
-          </v-flex>
-        　<v-flex xs12 sm6>
-            <v-text-field
-              v-model="phone"
-              placeholder="電話番号"
-            ></v-text-field>
-          </v-flex>
-        </v-layout>
+        <v-text-field
+          v-model="phone"
+          label="電話番号"
+          :rules="[rules.required]"
+          required
+        ></v-text-field>
 
-        <v-layout row>
-          <v-flex xs3>
-            <v-subheader>メールアドレス</v-subheader>
-          </v-flex>
-        　<v-flex xs12 sm6>
-            <v-text-field
-              v-model="email"
-              placeholder="e-mailアドレス"
-            ></v-text-field>
-          </v-flex>
-        </v-layout>
+        <v-text-field
+          v-model="email"
+          label="e-mailアドレス"
+          :rules="[rules.required, rules.email]"
+          required
+        ></v-text-field>
 
-        <v-layout row>
-          <v-flex xs3>
-            <v-subheader>専攻</v-subheader>
-          </v-flex>
-        　<v-flex xs12 sm6>
-            <v-text-field
-              v-model="major"
-              placeholder="専攻"
-            ></v-text-field>
-          </v-flex>
-        </v-layout>
+        <v-text-field
+          v-model="major"
+          label="専攻"
+          :rules="[rules.required]"
+          required
+        ></v-text-field>
 
-        <v-layout row>
-          <v-flex xs3>
-            <v-subheader>パスワード</v-subheader>
-          </v-flex>
-        　<v-flex xs12 sm6>
+        <v-text-field
+          v-model="password"
+          label="パスワード"
+          :append-icon="show1 ? 'visibility_off' : 'visibility'"
+          :rules="[rules.required, rules.min]"
+          :type="show1 ? 'text' : 'password'"
+          hint="At least 6 characters"
+          counter
+          @click:append="show1 = !show1"
+        ></v-text-field>
 
-          <v-text-field
-            v-model="password"
-            :append-icon="show1 ? 'visibility_off' : 'visibility'"
-            :rules="[rules.required, rules.min]"
-            :type="show1 ? 'text' : 'password'"
-            name="input-10-1"
-            hint="At least 6 characters"
-            counter
-            @click:append="show1 = !show1"
-          ></v-text-field>
-          </v-flex>
+        <v-text-field
+          v-model="passwordConfirm"
+          :append-icon="show2 ? 'visibility_off' : 'visibility'"
+          :rules="[rules.required, rules.confirm]"
+          :type="show2 ? 'text' : 'password'"
+          label="パスワード(再入力)"
+          counter
+          @click:append="show2 = !show2"
+        ></v-text-field>
+        <v-layout justify-space-between>
+          <v-btn @click="clear()">クリア</v-btn>
+          <v-btn :disabled="!valid" @click="registration()">確認画面へ</v-btn>
         </v-layout>
-
-        <v-layout row>
-          <v-flex xs3>
-            <v-subheader>パスワード再入力</v-subheader>
-          </v-flex>
-        　<v-flex xs12 sm6>
-            <v-text-field
-            v-model="passwordConfirm"
-            :append-icon="show2 ? 'visibility_off' : 'visibility'"
-            :rules="[rules.confirmRequired, rules.confirmRules]"
-            :type="show2 ? 'text' : 'password'"
-            name="input-10-2"
-            counter
-            @click:append="show2 = !show2"
-            ></v-text-field>
-          </v-flex>
-        </v-layout>
-        <v-layout justify-center>
-          <v-card-actions left>
-            <v-btn @click="registration()">確認画面へ</v-btn>
-          </v-card-actions>
-        </v-layout>
-      </v-card>
-    </section>
-  </div>
+      </v-form>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
   import firebase from "firebase";
+  const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   export default {
     name: "Register",
     props: ["p_lastname", "p_firstname", "p_phone", "p_email", "p_major"],
@@ -115,13 +80,16 @@
         major: "",
         password: "",
         passwordConfirm: "",
+        valid: true,
         show1: false,
         show2: false,
         rules: {
-          required: value => !!value || 'Required.',
+          required: v => !!v || 'Required.',
           min: v => v.length >= 8 || 'Min 8 characters',
-          confirmRequired: v => !!v || 'Password Confirm is required',
-          confirmRules: v => v === this.password && 'equal to password',
+          email: value => {
+            return pattern.test(value) || 'メールアドレスは正しくありません'
+          },
+          confirm: v => v.localeCompare(this.password) && 'Passwords don\'t match',
         }
       };
     },
@@ -149,6 +117,9 @@
             }
           });
         }
+      },
+      clear () {
+        this.$refs.form.reset()
       }
     }
   };
