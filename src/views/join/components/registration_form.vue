@@ -136,7 +136,7 @@
             firstname: this.firstname,
             phone: this.phone,
             email: this.email,
-            majo: this.major,
+            major: this.major,
             password: this.password
           }
         });
