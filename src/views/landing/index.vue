@@ -2,14 +2,14 @@
   <v-content id="landing">
     <v-container>
       <v-layout row>
-        <v-flex xs12, pt-5 mt-5 id="landing_title">
+        <v-flex xs12, pa-3 ma-3 id="landing_title">
           かたらう
         </v-flex>
       </v-layout>
     </v-container>
     <v-container>
-      <v-layout justify-center row pt-5>
-        <v-flex xs6 lg4 pt-3 mt-3>
+      <v-layout justify-center row>
+        <v-flex xs6 lg4>
           <v-card
             class="selection"
             @click="to_students()"
@@ -28,7 +28,7 @@
           </v-card>
         </v-flex>
         <v-flex xs0 lg2/>
-        <v-flex xs6 lg4 pt-3 mt-3>
+        <v-flex xs6 lg4>
           <v-card
             class="selection"
             @click="to_elderly()"
