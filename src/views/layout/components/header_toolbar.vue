@@ -27,13 +27,13 @@
             <v-list-tile-action>
               <v-icon>person</v-icon>
             </v-list-tile-action>
-            学生
+            学生パートナー
           </v-list-tile>
           <v-list-tile to="/elderly">
             <v-list-tile-action>
               <v-icon>person</v-icon>
             </v-list-tile-action>
-            高齢者
+            高齢者パートナー
           </v-list-tile>
         </v-list-tile-content>
       </v-list>
@@ -47,21 +47,18 @@
       app
     >
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title class="mr-5 align-center">
+      <v-toolbar-title mr-5 align-center>
         <span class="title">かたらう</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-
-          <v-btn flat >学生</v-btn>
-          <v-btn flat>高齢者</v-btn>
-          <v-btn icon flat>
-            <v-icon right justify-end>face</v-icon>
-            </v-btn>
-          <v-toolbar-title flat>Your Nameさん</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-layout align-end jistify-end row style="max-width: 200px">
+      <v-layout align-center jistify-end row style="max-width: 300px">
+       <v-toolbar-items>
+          <v-btn flat to="/students">学生パートナー</v-btn>
+          <v-btn flat to="/elderly">高齢者パートナー</v-btn>
+          <v-btn flat icon>
+            <v-icon>face</v-icon>
+          </v-btn>
+       </v-toolbar-items>
       </v-layout>
     </v-toolbar>
   </div>
