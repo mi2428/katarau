@@ -39,7 +39,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar
-      color="orange"
+      color="#bfbfbf"
       dense
     >
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
