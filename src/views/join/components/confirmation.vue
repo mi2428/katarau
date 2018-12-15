@@ -31,6 +31,7 @@
               major: this.major
             });
             alert("Account created succesfully!");
+            this.$router.push('/students');
           })
           .catch(error => {
             alert(error.message);

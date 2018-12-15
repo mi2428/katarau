@@ -61,7 +61,7 @@
             <v-subheader>パスワード</v-subheader>
           </v-flex>
         　<v-flex xs12 sm6>
-           
+
           <v-text-field
             v-model="password"
             :append-icon="show1 ? 'visibility_off' : 'visibility'"
@@ -93,7 +93,7 @@
         </v-layout>
         <v-layout justify-center>
           <v-card-actions left>
-            <v-btn @click="registration()">登録する</v-btn>
+            <v-btn @click="registration()">確認画面へ</v-btn>
           </v-card-actions>
         </v-layout>
       </v-card>
@@ -118,10 +118,10 @@
         show2: false,
         rules: {
           required: value => !!value || 'Required.',
-          min: v => v.length >= 8 || 'Min 8 characters',        
+          min: v => v.length >= 8 || 'Min 8 characters',
           confirmRequired: v => !!v || 'Password Confirm is required',
           confirmRules: v => v === this.password && 'equal to password',
-        }       
+        }
       };
     },
     computed: {
