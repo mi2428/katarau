@@ -51,11 +51,6 @@ const router = new Router({
             component: SignIn
           },
           {
-            path: "/test",
-            name: "signin",
-            component: test
-          },
-          {
             path: "/students/join",
             name: "join",
             component: Join,

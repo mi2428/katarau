@@ -70,8 +70,10 @@
             </v-card-title>
           </v-card>
         </v-flex>
-
-        <user-voice></user-voice>
+        
+        <v-flex xs12 lg8>
+          <user-voice></user-voice>
+        </v-flex>
       </v-layout>
     </v-container>
   </v-content>
