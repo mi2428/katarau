@@ -57,11 +57,11 @@
           <v-btn icon flat>
             <v-icon right justify-end>face</v-icon>
             </v-btn>
-          <v-text flat>Your Nameさん</v-text>
+          <v-toolbar-title flat>Your Nameさん</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
-      <v-layout align-end jistify-end row style="max-width: 650px">
+      <v-layout align-end jistify-end row style="max-width: 200px">
       </v-layout>
     </v-toolbar>
   </div>
