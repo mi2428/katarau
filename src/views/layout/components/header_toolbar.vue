@@ -55,7 +55,10 @@
         <v-toolbar-items>
           <v-btn flat to="/students">学生パートナー</v-btn>
           <v-btn flat to="/elderly">高齢者パートナー</v-btn>
-          <v-btn flat to="/">サインアウト(test)</v-btn>
+            <v-div v-if="logged_in">
+              <v-btn flat to="/">サインアウト</v-btn>
+            </v-div>
+              <v-btn v-else flat to="/students/signin">サインイン</v-btn>
           <v-menu offset-y>
             <v-btn flat icon slot="activator">
               <v-icon>face</v-icon>
@@ -77,15 +80,18 @@
 <script>
   export default {
     name:"HeaderToolbar",
-    data: () => ({
-      drawer: false,
-      items: [
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me 2' }
-      ]
-      })
+    data () {
+      return {
+        drawer: false,
+        logged_in: false,
+        items: [
+          { title: 'Click Me' },
+          { title: 'Click Me' },
+          { title: 'Click Me' },
+          { title: 'Click Me 2' }
+        ]
+        }
+    }
   }
 </script>
 
