@@ -7,8 +7,8 @@ import Elderly from "./views/elderly/index.vue"
 import Join from "./views/join/index.vue"
 import Register from "./views/join/components/registration_form.vue"
 import Confirm from "./views/join/components/confirmation.vue"
-import Profile from "./views/profile/index.vue"
 import SignIn from "./views/sign_in/index.vue"
+import Profile from "./views/profile/index.vue"
 
 
 Vue.use(Router)

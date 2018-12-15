@@ -29,7 +29,7 @@
 <script>
   import firebase from "firebase";
   export default {
-    name: "Confirm",
+    name: "UserProfile",
     props: ["p_lastname", "p_firstname", "p_phone", "p_email", "p_major", "p_password"],
     data(){
       return {
@@ -41,7 +41,7 @@
         password: ""
       }
     },
- /*   created: {      
+ /*   created: {
       firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
           // User is signed in.

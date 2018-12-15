@@ -12,10 +12,10 @@
 
 <script>
 // @ is an alias to /src
-//import UserProfile from "./components/userprofile.vue";
+import UserProfile from "./components/userprofile.vue";
 
 export default {
-  name: "User",
+  name: "Profile",
   props: ["userId"],
   components: {
     UserProfile
