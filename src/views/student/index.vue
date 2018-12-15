@@ -20,9 +20,11 @@
                       あああああああああああああああああああああああああああああ</span>
                   </div>
                 </v-card-title>
-                <v-card-actions >
-                  <v-btn grey left  @click="to_students_join()" >今すぐ登録する</v-btn>
-                </v-card-actions>
+                <v-layout justify-center>
+                  <v-card-actions>
+                    <v-btn grey left  @click="to_students_join()" >今すぐ登録する</v-btn>
+                  </v-card-actions>
+                </v-layout>
               </v-card>
             </v-flex>
 
