@@ -105,6 +105,7 @@
   import firebase from "firebase";
   export default {
     name: "Register",
+    props: ["p_lastname", "p_firstname", "p_phone", "p_email", "p_major"],
     data() {
       return {
         lastname: "",
@@ -124,21 +125,27 @@
         }
       };
     },
+    beforeMount() {
+      this.lastname = this.p_lastname;
+      this.firstname = this.p_firstname;
+      this.phone = this.p_phone;
+      this.email = this.p_email;
+      this.major = this.p_major;
+    },
     computed: {
     },
-
     methods: {
       registration() {
         if(this.password===this.passwordConfirm){
           this.$router.push({
             name: 'confirm',
             params:{
-              lastname: this.lastname,
-              firstname: this.firstname,
-              phone: this.phone,
-              email: this.email,
-              major: this.major,
-              password: this.password
+              p_lastname: this.lastname,
+              p_firstname: this.firstname,
+              p_phone: this.phone,
+              p_email: this.email,
+              p_major: this.major,
+              p_password: this.password
             }
           });
         }

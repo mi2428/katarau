@@ -6,7 +6,10 @@
       <v-text-field v-model="phone" disabled></v-text-field>
       <v-text-field v-model="email" disabled></v-text-field>
       <v-text-field v-model="major" disabled></v-text-field>
-      <v-btn @click="registration()">登録完了</v-btn>
+      <v-layout justify-space-between row>
+        <v-btn @click="go_back()">戻る</v-btn>
+        <v-btn @click="registration()">登録完了</v-btn>
+      </v-layout>
     </v-flex>
   </v-layout>
 </template>
@@ -15,12 +18,38 @@
   import firebase from "firebase";
   export default {
     name: "Confirm",
-    props: ["lastname", "firstname", "phone", "email", "major", "password"],
+    props: ["p_lastname", "p_firstname", "p_phone", "p_email", "p_major", "p_password"],
     data(){
       return {
+        lastname: "",
+        firstname: "",
+        phone: "",
+        email: "",
+        major: "",
+        password: ""
       }
     },
+    beforeMount() {
+      this.lastname = this.p_lastname;
+      this.firstname = this.p_firstname;
+      this.phone = this.p_phone;
+      this.email = this.p_email;
+      this.major = this.p_major;
+      this.password = this.p_password
+    },
     methods: {
+      go_back() {
+        this.$router.push({
+          name: 'form',
+          params: {
+            p_lastname: this.lastname,
+            p_firstname: this.firstname,
+            p_phone: this.phone,
+            p_email: this.email,
+            p_major: this.major
+          }
+        });
+      },
       registration() {
         firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
           .then(user => {

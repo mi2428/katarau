@@ -58,7 +58,8 @@ const router = new Router({
               {
                 path: 'form',
                 name: 'form',
-                component: Register
+                component: Register,
+                props: true
               },
               {
                 path: 'confirm',
