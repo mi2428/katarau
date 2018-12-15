@@ -1,11 +1,22 @@
 <template>
   <v-layout justify-center>
     <v-flex xs12 lg6 pt-5 mt-5>
-      <v-text-field v-model="lastname" disabled></v-text-field>
-      <v-text-field v-model="firstname" disabled></v-text-field>
-      <v-text-field v-model="phone" disabled></v-text-field>
-      <v-text-field v-model="email" disabled></v-text-field>
-      <v-text-field v-model="major" disabled></v-text-field>
+      <v-text-field
+        v-model="lastname"
+        disabled></v-text-field>
+      <v-text-field
+        v-model="firstname"
+        disabled></v-text-field>
+      <v-text-field
+        v-model="phone"
+        mask="### - #### - ####"
+        disabled></v-text-field>
+      <v-text-field
+        v-model="email"
+        disabled></v-text-field>
+      <v-text-field
+        v-model="major"
+        disabled></v-text-field>
       <v-layout justify-space-between row>
         <v-btn @click="go_back()">戻る</v-btn>
         <v-btn @click="registration()">登録完了</v-btn>

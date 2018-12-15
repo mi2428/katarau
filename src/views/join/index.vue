@@ -3,7 +3,7 @@
     <v-container>
       <v-layout row>
         <v-flex xs12>
-          <h1>Registration Form</h1>
+          <h1>会員登録</h1>
           <router-view></router-view>
         </v-flex>
       </v-layout>

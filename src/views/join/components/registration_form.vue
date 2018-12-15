@@ -6,34 +6,30 @@
           v-model="lastname"
           label="性"
           :rules="[rules.required]"
-          required
         ></v-text-field>
         <v-text-field
           v-model="firstname"
           label="名"
           :rules="[rules.required]"
-          required
         ></v-text-field>
 
         <v-text-field
           v-model="phone"
           label="電話番号"
           :rules="[rules.required]"
-          required
+          mask="### - #### - ####"
         ></v-text-field>
 
         <v-text-field
           v-model="email"
           label="e-mailアドレス"
           :rules="[rules.required, rules.email]"
-          required
         ></v-text-field>
 
         <v-text-field
           v-model="major"
           label="専攻"
           :rules="[rules.required]"
-          required
         ></v-text-field>
 
         <v-text-field
@@ -46,7 +42,6 @@
           counter
           @click:append="show1 = !show1"
         ></v-text-field>
-
         <v-text-field
           v-model="passwordConfirm"
           :append-icon="show2 ? 'visibility_off' : 'visibility'"
@@ -56,6 +51,7 @@
           counter
           @click:append="show2 = !show2"
         ></v-text-field>
+
         <v-layout justify-space-between>
           <v-btn @click="clear()">クリア</v-btn>
           <v-btn :disabled="!valid" @click="registration()">確認画面へ</v-btn>
@@ -80,7 +76,7 @@
         major: "",
         password: "",
         passwordConfirm: "",
-        valid: true,
+        valid: false,
         show1: false,
         show2: false,
         rules: {
@@ -100,11 +96,9 @@
       this.email = this.p_email;
       this.major = this.p_major;
     },
-    computed: {
-    },
     methods: {
       registration() {
-        if(this.password===this.passwordConfirm){
+        if(this.$refs.form.validate()){
           this.$router.push({
             name: 'confirm',
             params:{
