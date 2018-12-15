@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Landing from "./views/Landing/index.vue"
 import Student from "./views/Student/index.vue"
+import Join from "./views/Join/index.vue"
 import Elderly from "./views/Elderly/index.vue"
 import Layout from "@/views/Layout"
 
@@ -39,7 +40,13 @@ const router = new Router({
             path: "/elderly",
             name: "elderly",
             component: Elderly
+          },
+          {
+            path: "/students/join",
+            name: "join",
+            component: Join
           }
+        
         ]
       }
     ]
