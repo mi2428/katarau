@@ -7,6 +7,7 @@ import Elderly from "./views/elderly/index.vue"
 import Join from "./views/join/index.vue"
 import Register from "./views/join/components/registration_form.vue"
 import Confirm from "./views/join/components/confirmation.vue"
+import test from "./views/student/components/user_voice.vue"
 import SignIn from "./views/sign_in/index.vue"
 
 
@@ -48,6 +49,11 @@ const router = new Router({
             path: "/students/signin",
             name: "signin",
             component: SignIn
+          },
+          {
+            path: "/test",
+            name: "signin",
+            component: test
           },
           {
             path: "/students/join",

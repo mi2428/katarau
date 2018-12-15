@@ -70,12 +70,17 @@
             </v-card-title>
           </v-card>
         </v-flex>
+
+        <user-voice></user-voice>
       </v-layout>
     </v-container>
   </v-content>
 </template>
 
 <script>
+// @ is an alias to /src
+import UserVoice from "./components/user_voice.vue";
+
 export default {
   name: "Student",
   methods: {
@@ -85,6 +90,9 @@ export default {
     to_students_signin() {
       this.$router.push({path : 'students/signin'})
     },
+  },
+  components:{
+    UserVoice
   }
 };
 </script>
