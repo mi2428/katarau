@@ -1,19 +1,19 @@
 <template>
   <div>
-    <header-tool-bar/>
+    <header-toolbar/>
     <router-view/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HeaderToolBar from "./components/HeaderToolBar.vue";
+import HeaderToolbar from "./components/header_toolbar.vue";
 
 
 export default {
   name: "Layout",
   components: {
-    HeaderToolBar
+    HeaderToolbar
   }
 };
 </script>

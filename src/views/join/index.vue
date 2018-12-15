@@ -3,9 +3,8 @@
     <v-container>
       <v-layout row>
         <v-flex xs12>
-          <h1>RegistrationFoam</h1>
-          
-          <Regist></Regist>
+          <h1>Registration Form</h1>
+          <Register/>
         </v-flex>
       </v-layout>
     </v-container>
@@ -13,11 +12,11 @@
 </template>
 
 <script>
-import Regist from "./components/RegistrationFoam.vue";
+import Register from "./components/registration_form.vue";
 export default {
-  name: "Join",  
+  name: "Join",
   components: {
-    Regist
+    Register
   }
 };
 </script>

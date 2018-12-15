@@ -58,7 +58,7 @@
 
 <script>
 export default {
-    name:"HeaderToolBar",
+    name:"HeaderToolbar",
     data: () => ({
     drawer: false
   })

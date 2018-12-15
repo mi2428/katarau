@@ -20,6 +20,13 @@ var config = {
 firebase.initializeApp(config);
 
 
+const firestore = firebase.firestore();
+const settings = {
+  timestampsInSnapshots: true, // fix timestamp warning
+};
+firestore.settings(settings);
+
+
 Vue.use(Vuetify),{
   iconfont: 'mdi'
 };
