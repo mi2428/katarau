@@ -22,7 +22,7 @@
 
         <v-text-field
           v-model="email"
-          label="e-mailアドレス"
+          label="メールアドレス"
           :rules="[rules.required, rules.email]"
         ></v-text-field>
 

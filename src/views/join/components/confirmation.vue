@@ -3,19 +3,24 @@
     <v-flex xs12 lg6 pt-5 mt-5>
       <v-text-field
         v-model="lastname"
+        label="姓"
         disabled></v-text-field>
       <v-text-field
         v-model="firstname"
+        label="名"
         disabled></v-text-field>
       <v-text-field
         v-model="phone"
         mask="### - #### - ####"
+        label="電話番号"
         disabled></v-text-field>
       <v-text-field
         v-model="email"
+        label="メールアドレス"
         disabled></v-text-field>
       <v-text-field
         v-model="major"
+        label="専攻"
         disabled></v-text-field>
       <v-layout justify-space-between row>
         <v-btn @click="go_back()">戻る</v-btn>
