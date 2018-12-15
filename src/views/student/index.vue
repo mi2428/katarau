@@ -2,8 +2,8 @@
   <v-content>
     <v-container fluid grid-list-lg>
       <v-layout col wrap justify-center>
-        <v-flex xs12 lg8>
-          <v-card color="orange">
+        <v-flex xs12 md10 lg8>
+          <v-card color="#ff9933">
             <v-card-title primary-title>
               <div>
                 <h3 class="card_title">かたらう学生パートナー</h3>
@@ -16,13 +16,12 @@
                 </span>
               </div>
             </v-card-title>
-            <v-layout justify-center>
+            <v-layout col wrap justify-center>
               <v-card-actions>
                 <v-btn
                   large
                   grey
-                  flat
-                  color="blue"
+                  color="#ffffb3"
                   class="card_button"
                   @click="to_students_join()"
                 >
@@ -31,8 +30,7 @@
                 <v-btn
                   large
                   grey
-                  flat
-                  color="blue"
+                  color="#ffffb3"
                   class="card_button"
                   @click="to_students_signin()"
                 >
@@ -42,7 +40,7 @@
             </v-layout>
           </v-card>
         </v-flex>
-        <v-flex xs12 lg8>
+        <v-flex xs12 md10 lg8>
           <v-card color="lime">
             <v-card-title primary-title>
               <div>
@@ -58,7 +56,7 @@
             </v-card-title>
           </v-card>
         </v-flex>
-        <v-flex xs12 lg8>
+        <v-flex xs12 md10 lg8>
           <v-card color="lime">
             <v-card-title primary-title>
               <div>
@@ -101,12 +99,13 @@ export default {
 
 <style scoped lang="scss">
 .card_title {
-  color: black;
+  color:#1C1C1C;
   font-size: 25pt;
 }
 .card_content {
-  color: black;
+  color: #1C1C1C;
   font-size: 15pt;
+  text-align: center;
 }
 .card_button {
   font-size: 18pt;

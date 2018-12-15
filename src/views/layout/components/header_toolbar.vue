@@ -44,16 +44,16 @@
     >
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title mr-5 align-center>
-        <span class="title">かたらう</span>
+        <span class="title"><h3>かたらう</h3></span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-layout justify-end row>
+      <v-layout justify-end row fill-height>
         <v-toolbar-items>
           <v-btn flat to="/students">学生パートナー</v-btn>
           <v-btn flat to="/elderly">高齢者パートナー</v-btn>
           <v-divider vertical></v-divider>
           <v-btn v-if="logged_in" flat @click="signout()">サインアウト</v-btn>
-          <v-layout row v-else>
+          <v-layout row v-else fill-height>
             <v-text-field
               solo
               v-model="email"

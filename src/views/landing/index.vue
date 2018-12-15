@@ -24,7 +24,7 @@
           </v-card>
         </v-flex>
         <v-flex xs4 lg3>
-          <v-card id="landing_vision">
+          <v-card flat id="landing_vision">
             <div>独居の高齢者に充実した生活を提供する。</div>
             <div>頑張ろう、日本！</div>
           </v-card>
@@ -57,16 +57,18 @@ export default {
 <style scoped lang="scss">
   #landing {
     min-height: 100vh;
-    background: black;
+    background: #F8ECE0;
   }
   #landing_title {
     color: orange;
     font-size: 50pt;
+    font-weight:bold
   }
   #landing_vision {
     color: orange;
-    background: black;
+    background: #F8ECE0;
     font-size: 20pt;
+    font-weight:bold
   }
   .selection {
     cursor: pointer;
