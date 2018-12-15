@@ -10,7 +10,7 @@
   import firebase from "firebase";
   export default {
     name: "Confirm",
-    props: ["lastname", "firstname", "phone_number", "major"],
+    props: ["lastname", "firstname", "phone", "email", "major", "password"],
     data(){
       return {
       }

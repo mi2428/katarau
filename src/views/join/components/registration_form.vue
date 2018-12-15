@@ -50,7 +50,7 @@
           </v-flex>
         　<v-flex xs12 sm6>
             <v-text-field
-              v-model="special"
+              v-model="major"
               placeholder="専攻"
             ></v-text-field>
           </v-flex>
@@ -83,11 +83,11 @@
     name: "Register",
     data() {
       return {
-        firstname: "",
         lastname: "",
+        firstname: "",
         phone: "",
         email: "",
-        special: "",
+        major: "",
         password: "",
       };
     },
@@ -96,7 +96,17 @@
 
     methods: {
       registration() {
-        this.$router.push({name: 'confirm', params:{firstname: this.firstname}})
+        this.$router.push({
+          name: 'confirm',
+          params:{
+            lastname: this.lastname,
+            firstname: this.firstname,
+            phone: this.phone,
+            email: this.email,
+            majo: this.major,
+            password: this.password
+          }
+        });
       }
     }
   };
