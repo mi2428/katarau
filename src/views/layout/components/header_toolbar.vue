@@ -13,9 +13,9 @@
             <v-icon rounded large>face</v-icon>
           </v-list-tile-avatar>
           <v-list-tile-content>
-            <v-list-tile v-if ="logged_in" to="/students/prifile" >
+            <v-list-tile v-if ="logged_in" to="/students/profile/me" >
               <!-- <v-list-tile-content v-model="this.lastname">さん</v-list-tile-content> -->
-              <v-list-tile-content>{{ lastname }}</v-list-tile-content>
+              <v-list-tile-content>{{ lastname }}{{firstname}}さん</v-list-tile-content>
             </v-list-tile>
             <v-list-tile-content v-else>匿名さん
             </v-list-tile-content>
