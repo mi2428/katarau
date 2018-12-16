@@ -3,7 +3,7 @@
     <v-content>
       <v-container fill-height>
         <v-layout justify-center align-center>
-          <user-profile></user-profile>
+          <router-view></router-view>
         </v-layout>
       </v-container>
     </v-content>
@@ -12,13 +12,9 @@
 
 <script>
 // @ is an alias to /src
-import UserProfile from "./components/userprofile.vue";
+//import UserProfile from "./components/userprofile.vue";
 
 export default {
   name: "Profile",
-  props: ["userId"],
-  components: {
-    UserProfile
-  }
 };
 </script>
