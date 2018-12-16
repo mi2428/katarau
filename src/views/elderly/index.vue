@@ -12,6 +12,9 @@
                   <br>
                   私たちはヘルプを求める年配の方とそれを助けることができる学生をつなぎます．
                 </span>
+                
+                <h3 class="card_title">興味のある方はこちらまで</h3>
+                <h3 class="card_title">090-1111-1111</h3>
               </div>
             </v-card-title>
             <v-layout col wrap justify-center>
