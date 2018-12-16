@@ -33,12 +33,12 @@
     props: ["p_lastname", "p_firstname", "p_phone", "p_email", "p_major", "p_password"],
     data(){
       return {
-        lastname: "a",
-        firstname: "b",
-        phone: "09011112222",
-        email: "d",
-        major: "e",
-        password: "f"
+        lastname: "",
+        firstname: "",
+        phone: "",
+        email: "",
+        major: "",
+        password: ""
       }
     },
     beforeCreate() {

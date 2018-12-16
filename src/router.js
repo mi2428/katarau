@@ -51,7 +51,7 @@ const router = new Router({
             component: SignIn
           },
           {
-            path: "/students/:userId",
+            path: "/students/profile",
             name: "profile",
             component: Profile,
             props: true
