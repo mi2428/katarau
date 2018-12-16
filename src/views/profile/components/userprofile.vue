@@ -33,29 +33,32 @@
     props: ["p_lastname", "p_firstname", "p_phone", "p_email", "p_major", "p_password"],
     data(){
       return {
-        lastname: "",
-        firstname: "",
-        phone: "",
-        email: "",
-        major: "",
-        password: ""
+        lastname: "a",
+        firstname: "b",
+        phone: "09011112222",
+        email: "d",
+        major: "e",
+        password: "f"
       }
     },
- /*   created: {
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          // User is signed in.
-          lastname = user.displayName;
-          lastname = user.displayName;
-          email = user.email;
-          emailVerified = user.emailVerified;
-          phone = user.phone;
-          // ...
+    beforeCreate() {
+      firebase.auth().onAuthStateChanged(user => {
+        if(user){
+         var docRef=firebase.firestore().collection("user").doc(user.email);
+         docRef.get().then(doc => {
+            var userData = doc.data();
+            this.lastname = userData.lastname
+            this.firstname = userData.firstname
+            this.phone = userData.phone
+            this.email = user.email
+            this.major = userData.major
+         })      
         } else {
           // User is signed out.
           // ...
         }
-      });
-    }*/
+      })
+
+    }
   }
 </script>
