@@ -100,7 +100,7 @@
       registration() {
         if(this.$refs.form.validate()){
           this.$router.push({
-            name: 'confirm',
+            name: 'Modifyconfirm',
             params:{
               p_lastname: this.lastname,
               p_firstname: this.firstname,
