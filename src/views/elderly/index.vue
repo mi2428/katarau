@@ -80,7 +80,7 @@
 
 <script>
 // @ is an alias to /src
-import UserVoice from "@/views/student/components/user_voice.vue";
+import UserVoice from "@/views/elderly/components/user_voice.vue";
 
 export default {
   name: "Student",

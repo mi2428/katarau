@@ -87,18 +87,6 @@
             <user-voice></user-voice>
           </v-card>
         </v-flex>
-
-        <v-card-actions>
-                <v-btn
-                  large
-                  grey
-                  color="#ffffb3"
-                  class="card_button"
-                  @click="to_students_join()"
-                >
-                  今すぐ登録する
-                </v-btn>
-        </v-card-actions>
       </v-layout>
     </v-container>
   </v-content>
