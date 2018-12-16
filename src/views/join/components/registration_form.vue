@@ -28,7 +28,7 @@
 
         <v-text-field
           v-model="major"
-          label="専攻"
+          label="得意なこと：例）パソコンができる，体力がある"
           :rules="[rules.required]"
         ></v-text-field>
 
@@ -38,7 +38,7 @@
           :append-icon="show1 ? 'visibility_off' : 'visibility'"
           :rules="[rules.required, rules.min]"
           :type="show1 ? 'text' : 'password'"
-          hint="At least 6 characters"
+          hint="" 
           counter
           @click:append="show1 = !show1"
         ></v-text-field>
@@ -80,12 +80,12 @@
         show1: false,
         show2: false,
         rules: {
-          required: v => !!v || 'Required.',
-          min: v => v.length >= 8 || 'Min 8 characters',
+          required: v => !!v || 'パスワード',
+          min: v => v.length >= 8 || '8文字以上にしてください',
           email: value => {
             return pattern.test(value) || 'メールアドレスは正しくありません'
           },
-          confirm: v => v.localeCompare(this.password) && 'Passwords don\'t match',
+          confirm: v => v.localeCompare(this.password) && 'パスワードが一緒ではありません',
         }
       };
     },
