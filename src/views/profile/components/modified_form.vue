@@ -2,6 +2,7 @@
   <v-layout row justify-center>
     <v-flex xs12 lg6>
       <v-form ref="form" v-model="valid" lazy-validation>
+        <p><font color="#0000ff" size="4">登録内容修正フォーム</font></p>
         <v-text-field
           v-model="lastname"
           label="性"
@@ -28,7 +29,7 @@
 
         <v-text-field
           v-model="major"
-          label="専攻"
+          label="学科名"
           :rules="[rules.required]"
         ></v-text-field>
 <!--

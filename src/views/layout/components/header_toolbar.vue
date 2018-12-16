@@ -40,8 +40,7 @@
             </v-list-tile-action>
             高齢者パートナー
           </v-list-tile>
-        </v-list-tile-content>
-        <v-list-tile  to="/help">
+          <v-list-tile  to="/help">
             <v-list-tile-action>
               <v-icon>help</v-icon>
             </v-list-tile-action>
@@ -80,7 +79,7 @@
               @click:append="show = !show"
               @keyup.enter="signin()"
             ></v-text-field>
-            <v-btn flat to="/students/signin">サインイン</v-btn>
+            <v-btn flat @click="signin()">サインイン</v-btn>
           </v-layout>
         </v-toolbar-items>
       </v-layout>
