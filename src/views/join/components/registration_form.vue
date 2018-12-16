@@ -4,7 +4,7 @@
       <v-form ref="form" v-model="valid" lazy-validation>
         <v-text-field
           v-model="lastname"
-          label="性"
+          label="姓"
           :rules="[rules.required]"
         ></v-text-field>
         <v-text-field
@@ -80,7 +80,7 @@
         show1: false,
         show2: false,
         rules: {
-          required: v => !!v || 'パスワード',
+          required: v => !!v || '入力してください',
           min: v => v.length >= 8 || '8文字以上にしてください',
           email: value => {
             return pattern.test(value) || 'メールアドレスは正しくありません'

@@ -77,8 +77,8 @@ const router = new Router({
                 props: true
               },
               {
-                path: 'form',
-                name: 'form',
+                path: 'modifyform',
+                name: 'modifyform',
                 component: ModifyForm,
                 props: true
               },
