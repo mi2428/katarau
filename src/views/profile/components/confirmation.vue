@@ -1,6 +1,7 @@
 <template>
   <v-layout justify-center>
     <v-flex xs12 lg6 pt-5 mt-5>
+      <p><font color="#0000ff" size="4">登録内容を確認し登録完了ボタンを押してください</font></p>
       <v-text-field
         v-model="lastname"
         label="姓"
