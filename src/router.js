@@ -12,6 +12,7 @@ import Profile from "./views/profile/index.vue"
 import Me from "./views/profile/components/userprofile.vue"
 import ModifyForm from "./views/profile/components/modified_form.vue"
 import ConfirmMe from "./views/profile/components/confirmation.vue"
+import Workrequest from "./views/work_request/index.vue"
 import Help from "./views/help/index.vue"
 
 Vue.use(Router)
@@ -57,6 +58,11 @@ const router = new Router({
             path: "/students/signin",
             name: "signin",
             component: SignIn
+          },
+          {
+            path: "/students/workrequest",
+            name: "workrequest",
+            component: Workrequest
           },
           {
             path: "/students/profile",
