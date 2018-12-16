@@ -5,7 +5,7 @@
         <p><font color="#0000ff" size="4">登録内容修正フォーム</font></p>
         <v-text-field
           v-model="lastname"
-          label="性"
+          label="姓"
           :rules="[rules.required]"
         ></v-text-field>
         <v-text-field
@@ -81,8 +81,8 @@
         show1: false,
         show2: false,
         rules: {
-          required: v => !!v || 'Required.',
-          min: v => v.length >= 8 || 'Min 8 characters',
+          required: v => !!v || '入力してください',
+          min: v => v.length >= 8 || '8文字以上にしてください',
           email: value => {
             return pattern.test(value) || 'メールアドレスは正しくありません'
           },
