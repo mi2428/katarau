@@ -3,16 +3,15 @@
     <v-container fluid grid-list-lg>
       <v-layout col wrap justify-center>
         <v-flex>
-          <v-card color="#ff9933">
+          <v-card color="#ff9999">
             <v-card-title primary-title>
               <div>
-                <h3 class="card_title">かたらう学生パートナー</h3>
+                <h3 class="card_title">かたらう高齢者パートナー</h3>
                 <span class="card_content">
-                  ご高齢者の方は歳をとるにつれて体の調子を保つのが難しくなります．<br>
-                  缶のふたが開けられない！蛍光灯が変えられない！重い荷物を運べない！<br>
-                  近くにヘルプを求める高齢者はたくさんいます．<br>
-                  しかし助けれる人たちが、そのヘルプに気づきにくいのが現状です<br>
-                  私たちはヘルプを求める老人とそれを助けることができる暇な学生をつなぎます．
+                  日常生活に困ることや,ちょっとした手伝いや話し相手を誰かにしてもらいたいことはありませんか？<br>
+                  <br>
+                  しかし,なかなか周囲の人に頼むことができないという方が多いのが現状です.<br>
+                  私たちはヘルプを求める年配の方とそれを助けることができる学生をつなぎます．
                 </span>
               </div>
             </v-card-title>
@@ -41,10 +40,10 @@
           </v-card>
         </v-flex>
         <v-flex>
-          <v-card color="lime">
+          <!-- <v-card color="#b3d9ff">
             <v-card-title primary-title>
               <div>
-                <h3 class="card_title">かたらう学生パートナーのメリット</h3>
+                <h3 class="card_title">かたらう高齢者パートナーのメリット</h3>
                 <span class="card_content">
                   学生は身内以外の高齢者との交流はほとんどありません．<br>
                   経験豊富な高齢者とお手伝いを通じて交流することにより<br>
@@ -54,15 +53,15 @@
                 </span>
               </div>
             </v-card-title>
-          </v-card>
+          </v-card> -->
         </v-flex>
         <v-flex>
-          <v-card color="lime">
+          <v-card color="#b3d9ff">
             <v-card-title primary-title>
               <div>
                 <h3 class="card_title">仕組み</h3>
                 <span class="card_content">
-                  学生の皆さんは会員登録してもらうと老人のヘルプに応じて学生へ連絡がいきます
+                  会員登録をした方は,いつでも学生にヘルプを求める連絡をとることができます.
                 </span>
               </div>
             </v-card-title>
