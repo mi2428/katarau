@@ -4,7 +4,7 @@
       <v-layout col wrap justify-center>
         <v-flex>
           <v-card color="#ff9999">
-            <v-card-title primary-title>
+            <v-card-text>
               <div>
                 <h3 class="card_title">かたらう高齢者パートナー</h3>
                 <span class="card_content">
@@ -14,12 +14,14 @@
                 </span>
                 
                 <h3 class="card_title">興味のある方はこちらまで</h3>
-                <h3 class="card_title">090-1111-1111</h3>
+                <h3 class="card_title">080-5871-3359</h3>
               </div>
-            </v-card-title>
+            </v-card-text>
+        <!--
             <v-layout col wrap justify-center>
-              <!-- <v-card-actions> -->
-                <!-- <v-btn
+
+              <v-card-actions> 
+                <v-btn
                   large
                   grey
                   color="#ffffb3"
@@ -37,12 +39,16 @@
                 >
                   サインイン
                 </v-btn>
-              </v-card-actions> -->
+              </v-card-actions>
             </v-layout>
+        -->
+
+
           </v-card>
         </v-flex>
+  <!--  
         <v-flex>
-          <!-- <v-card color="#b3d9ff">
+          <v-card color="#b3d9ff">
             <v-card-title primary-title>
               <div>
                 <h3 class="card_title">かたらう高齢者パートナーのメリット</h3>
@@ -55,18 +61,19 @@
                 </span>
               </div>
             </v-card-title>
-          </v-card> -->
+          </v-card> 
         </v-flex>
+  -->
         <v-flex>
           <v-card color="#b3d9ff">
-            <v-card-title primary-title>
+            <v-card-text>
               <div>
                 <h3 class="card_title">仕組み</h3>
                 <span class="card_content">
                   会員登録をした方は,いつでも学生にヘルプを求める連絡をとることができます.
                 </span>
               </div>
-            </v-card-title>
+            </v-card-text>
           </v-card>
         </v-flex>
         
