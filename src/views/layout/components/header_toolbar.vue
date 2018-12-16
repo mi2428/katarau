@@ -13,7 +13,12 @@
             <v-icon rounded large>face</v-icon>
           </v-list-tile-avatar>
           <v-list-tile-content>
-            <v-list-tile-title> Your Name</v-list-tile-title>
+            <v-list-tile v-if ="logged_in" to="/students/prifile" >
+              <!-- <v-list-tile-content v-model="this.lastname">さん</v-list-tile-content> -->
+              <v-list-tile-content v-model="lastname"></v-list-tile-content>
+            </v-list-tile>
+            <v-list-tile-content v-else>匿名さん
+            </v-list-tile-content>
           </v-list-tile-content>
         </v-toolbar>
         <v-list-tile-content>
@@ -88,9 +93,26 @@
         logged_in: false,
         show: false,
         email: "",
-        password: ""
+        password: "",
+        lastname: "",
+        firstname: ""
       };
     },
+    // created() {
+    //   firebase.auth().onAuthStateChanged(user => {
+    //     if(user){
+    //      var docRef=firebase.firestore().collection("user").doc(user.email);
+    //      docRef.get().then(doc => {
+    //         var userData = doc.data();
+    //         this.lastname = userData.lastname
+    //         this.firstname = userData.firstname
+    //      })
+    //     } else {
+    //       // User is signed out.
+    //       // ...
+    //     }
+    //   })
+    // },
     methods: {
       signout() {
         firebase.auth().signOut().then(() => {
@@ -127,6 +149,19 @@
           console.log(this.logged_in);
         } else {
           this.logged_in = false;
+        }
+        if(user){
+         var docRef=firebase.firestore().collection("user").doc(user.email);
+         docRef.get().then(doc => {
+            var userData = doc.data();
+            this.lastname = userData.lastname
+            this.firstname = userData.firstname
+            this.email = user.email
+            console.log(this.lastname);
+         })
+        } else {
+          // User is signed out.
+          // ...
         }
       });
     }

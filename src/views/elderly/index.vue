@@ -10,7 +10,6 @@
                 <span class="card_content">
                   日常生活に困ることや,ちょっとした手伝いや話し相手を誰かにしてもらいたいことはありませんか？<br>
                   <br>
-                  しかし,なかなか周囲の人に頼むことができないという方が多いのが現状です.<br>
                   私たちはヘルプを求める年配の方とそれを助けることができる学生をつなぎます．
                 </span>
               </div>
@@ -113,11 +112,11 @@ export default {
 <style scoped lang="scss">
 .card_title {
   color:#1C1C1C;
-  font-size: 25pt;
+  font-size: 30pt;
 }
 .card_content {
   color: #1C1C1C;
-  font-size: 15pt;
+  font-size: 20pt;
   text-align: center;
 }
 .card_button {
