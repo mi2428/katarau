@@ -4,7 +4,7 @@
       <v-layout col wrap justify-center>
         <v-flex>
           <v-card color="#ff9933">
-            <v-card-title primary-title>
+            <v-card-text>
               <div>
                 <h3 class="text_align_title">かたらう学生パートナー</h3>
                   <span class="text_align_content">
@@ -15,7 +15,7 @@
                     私たちはヘルプを求める年配の方と,それを助けることができる学生をつなぎます．
                   </span>
               </div>
-            </v-card-title>
+            </v-card-text>
             <v-layout col wrap justify-center>
               <v-card-actions>
                 <v-btn
@@ -40,9 +40,10 @@
             </v-layout>
           </v-card>
         </v-flex>
+        
         <v-flex>
           <v-card color="lime">
-            <v-card-title primary-title>
+            <v-card-text>
               <div clss="text_align">
                 <h3 class="text_align_title">かたらう学生パートナーのメリット</h3>
                   <span class="text_align_content">
@@ -51,35 +52,35 @@
                     また、授業の空きコマなどの隙間時間に短時間で可能なバイトとして,大学生という限られた有限な時間を有効活用してもらうことができます．
                   </span>
               </div>
-            </v-card-title>
+            </v-card-text>
           </v-card>
         </v-flex>
         <v-flex>
           <v-card color="lime">
-            <v-card-title primary-title>
+            <v-card-text >
               <div>
                 <h3 class="text_align_title">仕組み</h3>
                   <span class="text_align_content">
                     会員登録をした学生の皆さんには,高齢者のヘルプに応じて連絡がいきます.<br>
                   </span>
               </div>
-            </v-card-title>
+            </v-card-text>
           </v-card>
         </v-flex>
         <v-layout col wrap justify-center>
-              <v-card-actions>
-                <v-btn block
-                  large
-                  dark
-                  grey
-                  color="orange"
-                  class="large_card_button"
-                  @click="to_students_join()"
-                >
-                  今すぐ登録する
-                </v-btn>
-              </v-card-actions>
-            </v-layout>
+          <v-card-actions>
+            <v-btn block
+              large
+              dark
+              grey
+              color="orange"
+              class="large_card_button"
+              @click="to_students_join()"
+            >
+              今すぐ登録する
+            </v-btn>
+          </v-card-actions>
+        </v-layout>
 
         <v-flex xs12 lg8>
           <v-card color="lime">

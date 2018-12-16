@@ -63,7 +63,6 @@
 
 <script>
   import firebase from "firebase";
-  const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   export default {
     name: "Register",
     props: ["p_lastname", "p_firstname", "p_phone", "p_email", "p_major"],
@@ -83,6 +82,7 @@
           required: v => !!v || '入力してください',
           min: v => v.length >= 8 || '8文字以上にしてください',
           email: value => {
+            const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
             return pattern.test(value) || 'メールアドレスは正しくありません'
           },
           confirm: v => v.localeCompare(this.password) && 'パスワードが一緒ではありません',
