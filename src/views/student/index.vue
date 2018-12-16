@@ -84,7 +84,7 @@ export default {
   name: "Student",
   methods: {
     to_students_join() {
-      this.$router.push({path : 'students/join'})
+      this.$router.push({path : 'students/join/form'})
     },
     to_students_signin() {
       this.$router.push({path : 'students/signin'})
