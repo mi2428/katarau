@@ -41,6 +41,13 @@
             高齢者パートナー
           </v-list-tile>
         </v-list-tile-content>
+        <v-list-tile  to="/help">
+            <v-list-tile-action>
+              <v-icon>help</v-icon>
+            </v-list-tile-action>
+            ヘルプ
+          </v-list-tile>
+        </v-list-tile-content>
       </v-list>
     </v-navigation-drawer>
     <v-toolbar
