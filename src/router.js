@@ -12,7 +12,7 @@ import Profile from "./views/profile/index.vue"
 import Me from "./views/profile/components/userprofile.vue"
 import ModifyForm from "./views/profile/components/modified_form.vue"
 import ConfirmMe from "./views/profile/components/confirmation.vue"
-
+import Help from "./views/help/index.vue"
 
 Vue.use(Router)
 
@@ -37,6 +37,11 @@ const router = new Router({
             // this generates a separate chunk (about.[hash].js) for this route
             // which is lazy-loaded when the route is visited.
             component: () => import(/* webpackChunkName: "about" */ './views/about/index.vue')
+          },
+          {
+            path: "/help",
+            name: "help",
+            component: Help
           },
           {
             path: "/elderly",
