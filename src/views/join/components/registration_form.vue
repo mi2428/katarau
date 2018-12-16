@@ -28,7 +28,7 @@
 
         <v-text-field
           v-model="major"
-          label="得意なこと：例）パソコンができる，体力がある"
+          label="大学での学科名"
           :rules="[rules.required]"
         ></v-text-field>
 

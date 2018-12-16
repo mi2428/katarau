@@ -69,8 +69,23 @@
         </v-flex>
         
         <v-flex xs12 lg8>
-          <user-voice></user-voice>
+          <v-card color="lime">
+            <h3 class="card_title">利用者の声</h3>
+            <user-voice></user-voice>
+          </v-card>
         </v-flex>
+
+        <v-card-actions>
+                <v-btn
+                  large
+                  grey
+                  color="#ffffb3"
+                  class="card_button"
+                  @click="to_students_join()"
+                >
+                  今すぐ登録する
+                </v-btn>
+        </v-card-actions>
       </v-layout>
     </v-container>
   </v-content>

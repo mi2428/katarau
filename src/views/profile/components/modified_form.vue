@@ -28,7 +28,7 @@
 
         <v-text-field
           v-model="major"
-          label="専攻"
+          label="学科名"
           :rules="[rules.required]"
         ></v-text-field>
 <!--

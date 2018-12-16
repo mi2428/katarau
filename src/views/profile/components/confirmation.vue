@@ -20,7 +20,7 @@
         disabled></v-text-field>
       <v-text-field
         v-model="major"
-        label="専攻"
+        label="学科名"
         disabled></v-text-field>
       <v-layout justify-space-between row>
         <v-btn @click="go_back()">戻る</v-btn>
