@@ -68,9 +68,9 @@
           </v-card>
         </v-flex>
         
-        <!-- <v-flex xs12 lg8>
+        <v-flex xs12 lg8>
           <user-voice></user-voice>
-        </v-flex> -->
+        </v-flex>
       </v-layout>
     </v-container>
   </v-content>
@@ -78,7 +78,7 @@
 
 <script>
 // @ is an alias to /src
-// import UserVoice from "./components/user_voice.vue";
+import UserVoice from "@/views/student/components/user_voice.vue";
 
 export default {
   name: "Student",
@@ -90,9 +90,9 @@ export default {
   //     this.$router.push({path : 'students/signin'})
   //   },
   // },
-  // components:{
-  //   UserVoice
-  // },
+  components:{
+    UserVoice
+  },
   mounted(){
     console.log(this.$vuetify.breakpoint)
   },
