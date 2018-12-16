@@ -1,15 +1,17 @@
 <template>
   <v-content id="landing">
-    <v-container fluid>
-      <v-layout justify-center>
-        <v-flex xs12, pa-3 ma-3 id="landing_title">
+    <v-container fluid grid-list-sm>
+      <v-layout row wrap justify-space-between>
+        <v-flex xs12 id="landing_title">
           かたらう
         </v-flex>
-      </v-layout>
-    </v-container>
-    <v-container>
-      <v-layout justify-space-between align-center row>
-        <v-flex xs4 lg3>
+        <v-flex xs12>
+          <v-card id="landing_vision" flat>
+            <div>独居の高齢者に充実した生活を提供する。</div>
+            <div>頑張ろう、日本！</div>
+          </v-card>
+        </v-flex>
+        <v-flex xs12>
           <v-card
             ripple
             color="blue-grey darken-2"
@@ -17,19 +19,26 @@
             class="selection"
             to="students"
           >
-            <v-img v-bind:src="require('@/assets/landing_students.jpg')"/>
-            <v-card-title primary-title>
-              <v-layout justify-center>学生</v-layout>
-            </v-card-title>
+            <v-container
+              fluid
+              grid-list-lg
+            >
+              <v-layout>
+                <v-flex xs4>
+                  <v-img
+                    class="landing_img"
+                    v-bind:src="require('@/assets/landing_students.jpg')"/>
+                </v-flex>
+                <v-flex xs8>
+                  <v-card-title primary-title>
+                    <v-layout justify-center>学生様へ</v-layout>
+                  </v-card-title>
+                </v-flex>
+              </v-layout>
+            </v-container>
           </v-card>
         </v-flex>
-        <v-flex xs4 lg3>
-          <v-card flat id="landing_vision">
-            <div>独居の高齢者に充実した生活を提供する。</div>
-            <div>頑張ろう、日本！</div>
-          </v-card>
-        </v-flex>
-        <v-flex xs4 lg3>
+        <v-flex xs12>
           <v-card
             ripple
             color="blue-grey darken-2"
@@ -37,10 +46,23 @@
             to="elderly"
             class="selection"
           >
-            <v-img v-bind:src="require('@/assets/landing_elderly.jpg')"/>
-            <v-card-title primary-title>
-              <v-layout justify-center>高齢者</v-layout>
-            </v-card-title>
+            <v-container
+              fluid
+              grid-list-lg
+            >
+              <v-layout>
+                <v-flex xs4>
+                  <v-img
+                    class="landing_img"
+                    v-bind:src="require('@/assets/landing_elderly.jpg')"/>
+                </v-flex>
+                <v-flex xs8>
+                  <v-card-title primary-title>
+                    <v-layout justify-center>高齢者様へ</v-layout>
+                  </v-card-title>
+                </v-flex>
+              </v-layout>
+            </v-container>
           </v-card>
         </v-flex>
       </v-layout>
@@ -70,10 +92,15 @@ export default {
     font-size: 20pt;
     font-weight:bold
   }
+  .landing_img {
+    height: 30vh;
+    border-radius: 50px;
+  }
   .selection {
+    border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
     font-size: 40pt;
-    border-radius: 50px;
+    background-color: black;
   }
 </style>
