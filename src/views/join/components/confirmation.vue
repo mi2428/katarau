@@ -69,7 +69,7 @@
       registration() {
         firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
           .then(user => {
-            firebase.firestore().collection("user").add({
+            firebase.firestore().collection("user").doc(this.email).set({
               lastname: this.lastname,
               firstname: this.firstname,
               phone: this.phone,
