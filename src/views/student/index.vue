@@ -2,7 +2,7 @@
   <v-content>
     <v-container fluid grid-list-lg>
       <v-layout col wrap justify-center>
-        <v-flex xs12 md10 lg8>
+        <v-flex>
           <v-card color="#ff9933">
             <v-card-title primary-title>
               <div>
@@ -40,7 +40,7 @@
             </v-layout>
           </v-card>
         </v-flex>
-        <v-flex xs12 md10 lg8>
+        <v-flex>
           <v-card color="lime">
             <v-card-title primary-title>
               <div>
@@ -56,7 +56,7 @@
             </v-card-title>
           </v-card>
         </v-flex>
-        <v-flex xs12 md10 lg8>
+        <v-flex>
           <v-card color="lime">
             <v-card-title primary-title>
               <div>
@@ -93,6 +93,20 @@ export default {
   },
   components:{
     UserVoice
+  },
+  mounted(){
+    console.log(this.$vuetify.breakpoint)
+  },
+   computed: {
+    imageHeight () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return '220px'
+        case 'sm': return '400px'
+        case 'md': return '500px'
+        case 'lg': return '600px'
+        case 'xl': return '800px'
+      }
+    }
   }
 };
 </script>
