@@ -72,8 +72,8 @@ const router = new Router({
                 props: true
               },
               {
-                path: 'confirm',
-                name: 'confirm',
+                path: 'Modifyconfirm',
+                name: 'Modifyconfirm',
                 component: ConfirmMe,
                 props: true
               }
