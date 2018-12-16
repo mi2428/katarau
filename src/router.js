@@ -9,6 +9,9 @@ import Register from "./views/join/components/registration_form.vue"
 import Confirm from "./views/join/components/confirmation.vue"
 import SignIn from "./views/sign_in/index.vue"
 import Profile from "./views/profile/index.vue"
+import Me from "./views/profile/components/userprofile.vue"
+import ModifyForm from "./views/profile/components/modified_form.vue"
+import ConfirmMe from "./views/profile/components/confirmation.vue"
 
 
 Vue.use(Router)
@@ -54,7 +57,27 @@ const router = new Router({
             path: "/students/profile",
             name: "profile",
             component: Profile,
-            props: true
+            redirect: {name: 'me'},
+            children: [
+              {
+                path: 'me',
+                name: 'me',
+                component: Me,
+                props: true
+              },
+              {
+                path: 'form',
+                name: 'form',
+                component: ModifyForm,
+                props: true
+              },
+              {
+                path: 'confirm',
+                name: 'confirm',
+                component: ConfirmMe,
+                props: true
+              }
+            ]
           },
           {
             path: "/students/join",
