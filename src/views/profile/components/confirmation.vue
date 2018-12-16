@@ -57,7 +57,7 @@
     methods: {
       go_back() {
         this.$router.push({
-          name: 'form',
+          name: 'modifyform',
           params: {
             p_lastname: this.lastname,
             p_firstname: this.firstname,
